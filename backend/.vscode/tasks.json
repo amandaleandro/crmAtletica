@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Scaffold NestJS backend",
+			"type": "shell",
+			"command": "npx -y @nestjs/cli new . --package-manager npm --skip-git --skip-install",
+			"group": "build"
+		},
+		{
+			"label": "Start NestJS dev server",
+			"type": "shell",
+			"command": "npm run start:dev",
+			"group": "build"
+		},
+		{
+			"label": "Subir Postgres com Docker Compose",
+			"type": "shell",
+			"command": "docker compose up -d",
+			"group": "build"
+		},
+		{
+			"label": "Verificar status do Postgres",
+			"type": "shell",
+			"command": "docker compose ps",
+			"group": "build"
+		},
+		{
+			"label": "Rodar backend NestJS conectado ao Postgres",
+			"type": "shell",
+			"command": "npm run start:dev",
+			"group": "build"
+		}
+	]
+}
